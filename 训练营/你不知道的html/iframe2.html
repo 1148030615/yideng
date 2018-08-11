@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="msg"></div>
+
+<script>
+    window.addEventListener("message",function(e){
+        if(e.source != window.parent){
+            return;
+        }
+        localStorage.setItem(e.data.key,e.data.value)
+        console.log(e)
+    })
+</script>
+
+</body>
+</html>

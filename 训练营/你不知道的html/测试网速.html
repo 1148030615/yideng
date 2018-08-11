@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    var img = new Image();
+    img.src = "https://www.baidu.com/img/bd_logo1.png?where=super";
+    var startTime = Date.now();
+    img.onload = function(){
+        var endTime = Date.now();
+        var speed = 7.88/(endTime - startTime) ;
+        console.log(speed,endTime - startTime)
+    }
+</script>
+
+</body>
+</html>

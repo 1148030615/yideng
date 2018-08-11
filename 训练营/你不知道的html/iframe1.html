@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<button onclick="sendmsg()">发送数据</button>
+<iframe id="iframe" src="http://localhost:63342/%E4%B8%80%E7%81%AF%E5%AD%A6%E4%B9%A0/%E8%AE%AD%E7%BB%83%E8%90%A5/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84html/iframe2.html"></iframe>
+<script>
+    function sendmsg(){
+
+        window.frames[0].postMessage("long",'http://localhost:63342')
+
+    }
+</script>
+</body>
+</html>
