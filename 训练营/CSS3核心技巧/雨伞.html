@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<style>-->
+    <!--.contain{ width: 400px; height: 400px; position: relative; margin: 50px auto}-->
+    <!--.contain:before{ width: 20px;height: 20px; content: " ";border-radius: 15px; border: 2px solid #000; position: absolute;-->
+    <!--left: 188px; top: -20px;}-->
+    <!--.box{ width: 400px; height: 200px; border-bottom: 2px solid #000; overflow: hidden;-->
+        <!--/*background: -webkit-radial-gradient(red, green, blue); !* Safari 5.1 - 6.0 *!*/-->
+        <!--/*background: -o-radial-gradient(red, green, blue); !* Opera 11.6 - 12.0 *!*/-->
+        <!--/*background: -moz-radial-gradient(red, green, blue); !* Firefox 3.6 - 15 *!*/-->
+
+        <!--position: relative;-->
+    <!--}-->
+    <!--.one{ width: 400px; height: 400px;background: radial-gradient(400px  ,red 0%, green, blue) center -200px no-repeat; /* 标准的语法 */-->
+        <!--background-size: 400px;border-radius: 200px 200px 0 0; border: 2px solid #000; box-sizing: border-box; position: absolute;-->
+    <!--top:2px}-->
+    <!--.one:before{content: " "; width: 300px; left: 50px; top:-2px; border-radius: 50%; border: 2px solid #000; height: 400px;-->
+    <!--position: absolute;background: radial-gradient(400px  ,blue 0%, red,greenyellow) center -200px no-repeat;}-->
+    <!--.one:after{content: " "; width: 200px; left: 100px; top:-2px; border-radius: 50%; border: 2px solid #000; height: 400px;-->
+        <!--position: absolute;background: radial-gradient(400px  ,blue 0%, darkmagenta,black) center -200px no-repeat;}-->
+    <!--.box:after{content: " "; width: 100px; left: 150px; top:2px; border-radius: 50%; border: 2px solid #000; height: 400px;-->
+        <!--position: absolute;background: radial-gradient(400px  ,blue 0%, chartreuse,greenyellow) center -200px no-repeat;}-->
+    <!--.contain:after{ width: 2px; height: 400px; position: absolute; left: 200px; top: 2px; content: " "; background-color: black}-->
+<!--</style>-->
+
+
+<!--<div class="contain">-->
+    <!--<div class="box">-->
+        <!--<div class="one"></div>-->#0000FF 10.01%,#0000FF 20%, #70DAFF 20.01%,#70DAFF 30%
+    <!--</div>-->
+<!--</div>-->
+
+<style>
+    .test{background: radial-gradient(400px 800px at center 133px,#f00 0%,#f00 16.65%,rgba(0,0,0,0) 16.66%)
+    ,radial-gradient(400px 800px at center 265px,rgba(0,0,0,0) 0%,rgba(0,0,0,0) 33.3%,#8B008B 33.31%,#8B008B 66.3%,rgba(0,0,0,0) 66.31%)
+    ,radial-gradient(400px 800px at center 67px,#7FFF00,#7FFF00)
+    ;
+        width:400px; height: 400px; overflow: hidden;
+    margin: auto; border-radius: 400px  400px 0 0; }
+
+    .con{ height: 133px; overflow: hidden}
+    .container{ width: 400px; margin: 70px auto; position: relative}
+    .container:after{ width: 2px; height: 300px; content: " "; background-color: #000; left: 50%; top: 0; position: absolute}
+    .container:before{ width: 20px; height: 20px; content: " ";  margin-left:-11px;left: 50%; top: -22px; position: absolute; border-radius: 50%; border: 2px solid #000;}
+</style>
+
+<div class="container">
+    <div class="con">
+        <div class="test"></div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
