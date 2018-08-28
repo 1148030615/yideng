@@ -1,5 +1,6 @@
 var System = require("system");
-System.loadSystem(location)
+var jquery =  require("./jquery");
+System.loadSystem(jquery)
     .then(function (system) {
         return system.import("./work");
     });

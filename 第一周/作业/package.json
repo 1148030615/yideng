@@ -2,10 +2,25 @@
   "name": "",
   "version": "",
   "scripts": {
-    "build": "sysjs work.js > work.bundle.js"
+    "build1": "sysjs work.js > work.bundle.js",
+    "bu5": "babel work.js -o work.bundle.js"
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "system": "^2.0.1"
+    "jquery": "^3.3.1",
+    "system": "^2.0.1",
+  },
+  "extensions": {
+    "html": "gutentag/extension"
+  },
+  "redirects": {
+    "./index.html": "./main.html"
+  },
+  "scripts": {
+    "build": "sysjs index.js > bundle.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1"
   }
 }
