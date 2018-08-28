@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "",
+  "scripts": {
+    "build": "sysjs work.js > work.bundle.js"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "system": "^2.0.1"
+  }
+}
