@@ -2,10 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="node_modules/system/boot.js" data-import="./entry"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
     <title>Title</title>
 </head>
 <body>
+<a >wwwwwwwwwww</a>
+
+<a >wwwwwwwwwww2</a>
+<script>
+
+    SystemJS.config({
+        map: {
+            jquery: '//code.jquery.com/jquery-2.1.4.min.js'
+        }
+    });
+
+
+
+
+    System.import('//code.jquery.com/jquery-2.1.4.min.js').then(function($) {
+        System.import('./work.bundle.js').then(function(Thumb){
+            console.log(Thumb)
+            $.fn.Thumb = function(num,callback){
+                for(var i = 0 ;i<this.length;i++){
+                    new Thumb(num,this.eq(i),callback)
+                }
+                return this;
+            }
+
+
+//            window.jquery = window.$ = $;
+
+            console.log($("a").Thumb(1,function(n){alert(n)}))
+
+        })
+
+    }).catch(function(e) {
+        console.error(e);
+    });
+
+
+
+</script>
 
 </body>
 </html>

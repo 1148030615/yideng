@@ -12,14 +12,16 @@ class Thumb extends PraiseButtom{
     constructor(zan,el,callback){
         super(zan);
         this.el = el;
-        this.callback = callback;
-    }
+        if(el.length>0){
+            let that  =  this;
+            el.click(function(){
+                that.Praise();
+                callback(that.num);
+                console.log(that)
+            });
+        }
 
-    press(){
-        this.Praise();
-        this.callback(el,this.num)
     }
 }
 
-
-new Thumb(2).Praise()
+module.exports  =  Thumb;
